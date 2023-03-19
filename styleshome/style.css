@@ -1,0 +1,60 @@
+body{
+    background-image: url("/componentshome/image/pexels-pixabay-276452\ -\ Editado.png");
+    color: white;
+    font-family: poppinsregular;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+header{
+    text-align: center;
+}
+
+main{
+    text-align: center;
+}
+
+img{
+    width: 200px;
+    border-radius: 200px;
+}
+
+#nome{
+    color: salmon;
+}
+
+li{
+    display: flex;
+    flex-direction: column;
+}
+
+button{
+    height: 60px;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 15px;
+    font-size: 15px;
+    width: 1000px;
+    font-weight: bold;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: salmon;
+    transition: 0.5s all;
+    color: white;
+}
+
+a{
+    color: white;
+    font-weight: 500;
+}
+
+a:hover{
+    color: salmon;
+    transition: 0.5s all;
+}
