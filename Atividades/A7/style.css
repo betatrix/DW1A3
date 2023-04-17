@@ -19,6 +19,12 @@ h2{
     color: #5847b9;
 }
 
+img{
+    width: 700px;
+    position: relative;
+    left: 11.5vw;
+}
+
 b{
     color: #292157;
 }
