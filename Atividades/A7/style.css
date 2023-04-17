@@ -1,0 +1,42 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fffefe;
+}
+
+body{
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+h1{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+h2{
+    color: #5847b9;
+}
+
+b{
+    color: #292157;
+}
+
+div{
+    padding-bottom: 10px;
+}
+
+.referencias a{
+    color: black;
+    text-decoration: none;
+}
+
+.referencias a:hover {
+    color: #0a4ea7;
+    transition: .6s;
+}
+
+footer{
+    color: #a39a9a;
+    text-align: center;
+}
