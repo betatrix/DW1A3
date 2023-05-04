@@ -1,0 +1,9 @@
+- Mudança de cores: backgrounds, buttons, cards, texts...
+- Transição para o botão de remover tupla e no botão de nova transição
+- Mudança de logos
+- Deixar as cores mais visíveis (principalmete das tuplas)
+- favicon
+- logo alternativo
+- Nome alternativo (FinanceXp)
+- Adicicionei um buy me a coffee hahah //enfrentando problemas com o link//
+- Adicionei um link no footer que direciona para o meu github
