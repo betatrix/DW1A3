@@ -196,6 +196,7 @@ table thead th {
 }
 
 #remove {
+    cursor: pointer;
     height: 24px;
 }
 
