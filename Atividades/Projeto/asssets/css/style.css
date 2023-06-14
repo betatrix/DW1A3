@@ -1,0 +1,414 @@
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;700;900&display=swap');
+
+/* ---------- VARIÁVEIS ----------- */
+:root {
+    --amarelo700:#ffa200;
+    --amarelo500: #ffc400;
+    --amarelo200: #ffe182;
+    --amarelo50: #fff8e1;
+
+    --azuldark: #041542;
+    --azul900: #07277e;
+    --azul500: #3454b5;
+    --azul300: #7588cb;
+    --azul50: #e7eaf6;
+
+    --cinza900: #1b1f27;
+    --cinza800: #3c4049;
+    --cinzalight: #737885;
+
+    --branco: #fff;
+
+    --titulo: 4em;
+    --titulo2: 2em;
+    --texto-simples: 1.2em;
+    --texto-simples2: 1.1em
+}
+
+
+/* ---------- GLOBAL ----------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+    scroll-behavior: smooth; /* O faz com que o link âncora tenha uma rolagem suave  */
+}
+
+
+/* ---------- CABEÇALHO ----------- */
+header {
+    position: fixed;
+    width: 100%;
+    padding: 80px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease-in-out;
+    z-index: 10; /* sobreposição maior que outros index */
+}
+
+/* Header vidro inicial*/
+.header-glass {
+    backdrop-filter: blur(2.5px); /*Deixa com aspecto de vidro*/
+    border-bottom: 1px solid #ffffff0d; 
+}
+
+/* Header solido cinza acionado pelo js*/
+.header-dark {
+    background-color: var(--cinza900);
+}
+
+header nav {
+    position: relative;
+    display: flex;
+    gap: 40px;
+}
+
+.download-btn {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    background-color: var(--amarelo50);
+    font-size: 1.0em;
+    font-weight: 700;
+    color: var(--cinza800);
+    cursor: pointer;
+  }
+
+header nav a {
+    text-decoration: none;
+    align-self: center;
+    color: var(--branco);
+    font-weight: 300;
+    font-size: var(--texto-simples);
+}
+
+header img {
+    height: 4.3em;
+    padding-top: 2px;
+}
+
+.download-btn:hover,
+header a:hover {
+    color: var(--amarelo700);
+    transition: all .5s ease-out;
+}
+
+
+/*---------- INÍCIO -----------*/
+#home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+    padding-bottom: 10px; /* esse padding foi necessario para o header reconhecer a seção about e mudar sua cor*/
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+}
+
+/* Filtro escuro */
+#home::before { /* before é usada para criar um elemento posicionado absolutamente, que cobre todo o elemento*/
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.842), rgba(0, 0, 0, 0.356));
+    z-index: 1;
+}
+
+#home .content {
+    color: var(--branco);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-top: 70px;
+    gap: 10px;
+    max-width: 550px;
+    z-index: 2;
+}
+
+#home .content h2 {
+    position: relative;
+    font-weight: 300;
+    font-size: var(--titulo);
+    color: var(--amarelo500);
+    transition: all 0.5s ease-out;
+}
+
+#home .content p {
+    position: relative;
+    font-weight: 300;
+    font-size: var(--texto-simples2);
+    line-height: 1.5em;
+    color: var(--branco);
+}
+
+#home .signup-btn {
+    position: relative;
+    display: inline-block;
+    font-size: var(--texto-simples);
+    max-width: 300px;
+    width: 200px;
+    background: var(--amarelo500);
+    color: black;
+    text-align: center;
+    padding: 13px 25px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    transition: all 0.5s ease-out;
+}
+
+#home .signup-btn:hover {
+    transition: all .4s ease-out;
+    color: var(--amarelo50);
+}
+
+
+/*---------- SOBRE -----------*/
+#about {
+    position: relative;
+    min-height: 100vh;
+    padding: 110px 80px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--branco);
+}
+
+#about .content {
+    padding-top: 10px;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+
+#about h3 {
+    font-size: var(--titulo2);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-bottom: 2px solid #505c2e9a;
+    color: var(--cinza800s);
+}
+
+#about p {
+    font-size: var(--texto-simples);
+}
+
+#about b {
+    color: var(--cinza800);
+}
+
+#about #textAbout {
+    margin-right: 5em;
+    margin-left: 80px;
+}
+
+#about .img {
+    width: 20em;
+    margin-left: 5em;
+}
+
+#about #textLogo {
+    margin-left: 5em;
+    margin-right: 50px;
+}
+
+#about #logogif {
+    width: 25em;
+    margin-right: 5em;
+}
+
+
+/* ---------- SERVIÇOS ----------- */
+#services {
+    background-color: var(--azul900);
+    padding: 120px 80px 100px 80px;
+}
+
+#services .content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    margin: 40px 0;
+}
+
+#services .content .box {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+svg {
+    width: 64px;
+    height: 64px;
+    fill: var(--azul300); /*muda a cor do svg*/
+}
+
+#plans h2,
+#services h2 {
+    font-size: var(--titulo2);
+    color: var(--azul50);
+    text-align: center;
+}
+
+#services .box h3 {
+    color: var(--azul50);
+    font-weight: 300;
+    font-size: var(--texto-simples);
+}
+
+#services p {
+    color: var(--azul50);
+    font-weight: 300;
+    font-size: var(--texto-simples);
+    text-align: center;
+}
+
+/* ---------- PLANOS ----------- */
+#plans {
+    background-color: var(--azul500);
+    padding: 90px 80px 110px 80px;
+}
+
+#plans .content {
+    color: var(--azuldark);
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+    margin: 40px 0px;
+}
+
+#plans .content .box {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--azul50);
+    padding: 30px 60px;
+    width: 30em; height: 27em;
+
+    border-radius: 25px;
+    gap: 20px;
+}
+
+#plans h3 {
+    font-size: 1.5em;
+}
+
+#plans li {
+    font-size: var(--texto-simples2);
+    margin-bottom: 10px;
+}
+
+/* lista personalizada */
+#plans ul {
+    list-style-image: url(./images/airplane.svg); /* marcardor de aviãozinho */
+    padding-left: 20px;
+}
+
+
+#plans .signup-btn {
+    position: relative;
+    display: inline-block;
+
+    font-size: var(--texto-simples);
+    background: var(--amarelo500);
+    color: black;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.5s;
+
+    width: 200px;
+    padding: 18px 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+
+}
+
+#plans .signup-btn:hover {
+    transition: all .4s ease-out;
+    color: var(--amarelo50);
+}
+
+#plans .sbutton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------- CONTATO ----------- */
+#contact {
+    min-height: 200px;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+#contact h2 {
+    font-size: var(--titulo2);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#contact .content {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+#contact .content li {
+    margin: 0 18px;
+}
+
+#contact svg {
+    width: 45px;
+    height: 45px;
+    fill: var(--cinza900);
+}
+
+#contact svg:hover {
+    fill: var(--amarelo700);
+    transition: 0.7s;
+}
+
+
+/* ---------- RODAPÉ ----------- */
+footer {
+    background-color: var(--cinza900);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: relative;
+    text-align: center;
+    color: var(--cinzalight);
+    font-size: 1.2em;
+}
+
+footer a {
+    color: var(--amarelo700);
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+footer a:hover {
+    color: var(--azul300);
+}
+
