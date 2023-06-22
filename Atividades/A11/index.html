@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca Cep</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <style>
+        body{
+            margin: 30px;
+        }
+
+        h1, p{
+            text-align: center;
+        }
+
+        div{
+            margin: 10px;
+        }
+
+        .alert {
+            margin-left: 60px;
+            margin-right: 60px;
+        }
+
+        button{
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Procure um endereço inserindo o CEP!</h1>
+    <div class="alert alert-info" role="alert">
+        <p>Este é um programa que consome uma API da Viacep para consultar Códigos de Endereçamento Postal (CEP) do Brasil.</p>
+        <p class="mb-0">Para utilizar, insira apenas o CEP desejado no formato de {8} dígitos deve ser fornecido, <b>por exemplo: "01001000".</b></p>
+    </div>
+    <div class="container">
+        <form action="" method="get">
+            <div class="form-group">
+                <label for="cep">CEP</label>
+                <input type="text" class="form-control" id="cep" placeholder="CEP">
+                <small></small>
+              </div>
+              <button type="submit" class="btn btn-primary mb-2" id="buscarCepBtn">Enviar</button>
+              <small></small>
+            <div class="form-group">
+                <label for="logradouro">Logradouro: </label>
+                <input type="text" class="form-control" id="logradouro" placeholder="Logradouro">
+                <small></small>
+            </div>
+            <div class="form-group">
+                <label for="bairro">Bairro: </label>
+                <input type="text" class="form-control" id="bairro" placeholder="Bairro">
+                <small></small>
+            </div>
+            <div class="form-group">
+                <label for="localidade">Cidade: </label>
+                <input type="text" class="form-control" id="localidade" placeholder="Cidade">
+                <small></small>
+            </div>
+            <div class="form-group">
+                <label for="uf">UF: </label>
+                <input type="text" class="form-control" id="uf" placeholder="UF">
+                <small></small>
+            </div>
+        </form>
+    </div>
+
+    <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+</body>
+</html>
